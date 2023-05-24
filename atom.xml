@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-12T01:19:35.903Z</updated>
+  <updated>2023-05-24T01:56:22.419Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux服务器常用笔记</title>
+    <link href="http://yoursite.com/2023/05/24/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2023/05/24/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%B8%B8%E7%94%A8%E7%AC%94%E8%AE%B0/</id>
+    <published>2023-05-24T01:49:30.000Z</published>
+    <updated>2023-05-24T01:56:22.419Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="linux服务器中多个python共存"><a href="#linux服务器中多个python共存" class="headerlink" title="linux服务器中多个python共存"></a>linux服务器中多个python共存</h3><p><a href="https://www.cnblogs.com/quantoublog/articles/16667753.html">【教程】linux下python2与python3共存安装教程 - 小拳头呀 - 博客园</a></p><p>其中可以不删除python软连接</p><span id="more"></span><h3 id="linux命令大全"><a href="#linux命令大全" class="headerlink" title="linux命令大全"></a>linux命令大全</h3><p><a href="https://www.runoob.com/linux/linux-command-manual.html">Linux 命令大全 | 菜鸟教程</a></p><h3 id="重装yum"><a href="#重装yum" class="headerlink" title="重装yum"></a>重装yum</h3><p><a href="https://blog.csdn.net/weixin_52372189/article/details/127471149">【Linux_Cent OS】yum错误:failure: repodata/repomd.xml from local: [Errno 256] No more mirrors to try._拾贰_C的博客-CSDN博客</a></p><h3 id="linux安装包"><a href="#linux安装包" class="headerlink" title="linux安装包"></a>linux安装包</h3><p><a href="http://mirrors.163.com/centos/7/os/x86_64/Packages/">mirrors.163.com</a></p><h3 id="linux磁盘分析"><a href="#linux磁盘分析" class="headerlink" title="linux磁盘分析"></a>linux磁盘分析</h3><p><a href="https://blog.csdn.net/weixin_43960336/article/details/122884220">Linux磁盘分析_linux 磁盘分析_☀Mark_LY的博客-CSDN博客</a></p><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ol><li>alias命令</li></ol><figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alias[别名]=[指令名称]</span><br></pre></td></tr></table></figure><p>这个别名只有当次生效，当断开连接再次打开的时候就会失效。</p><p>如果想让别名持久化，需要把上述指令写到  ~/.bashrc 文件中，然后执行</p><figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure><ol start="2"><li>ps -ef命令</li></ol><figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef|grep XX</span><br></pre></td></tr></table></figure><ol start="3"><li>查看端口占用情况</li></ol><figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -anp | grep 8080</span><br></pre></td></tr></table></figure><ol start="4"><li>启动redis </li></ol><figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./redis-server ../redis-conf</span><br></pre></td></tr></table></figure><ol start="5"><li>启动nacos</li></ol><figure class="highlight plaintext"><figcaption><span>Text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./startup.sh -m standalone</span><br></pre></td></tr></table></figure><p>6.crontab规则</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- * * * * *</span><br><span class="line"></span><br><span class="line">- 分 时 日 月 周（周几）</span><br><span class="line"></span><br><span class="line">- 每5分钟定时  */5 * * * *</span><br><span class="line"></span><br><span class="line">- 每小时第3和第15分钟执行  3,5 * * * *</span><br><span class="line"></span><br><span class="line">- 每隔两天的上午8-11点的第3分钟和第15分钟执行  3,15 8-11 /2 * *</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;linux服务器中多个python共存&quot;&gt;&lt;a href=&quot;#linux服务器中多个python共存&quot; class=&quot;headerlink&quot; title=&quot;linux服务器中多个python共存&quot;&gt;&lt;/a&gt;linux服务器中多个python共存&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.cnblogs.com/quantoublog/articles/16667753.html&quot;&gt;【教程】linux下python2与python3共存安装教程 - 小拳头呀 - 博客园&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中可以不删除python软连接&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="LINUX" scheme="http://yoursite.com/tags/LINUX/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库相关复习笔记</title>
